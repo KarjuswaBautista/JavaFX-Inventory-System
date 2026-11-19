@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-color: #63b33a;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxml.SignupPageController">
+   <children>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="620.0">
+         <children>
+            <Pane layoutX="24.0" layoutY="31.0" prefHeight="739.0" prefWidth="600.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <ImageView fitHeight="592.0" fitWidth="587.0" layoutX="7.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/LOGO_TRANSPARENT.png" />
+                     </image>
+                     <effect>
+                        <Blend />
+                     </effect>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="660.0">
+         <children>
+            <ImageView fitHeight="313.0" fitWidth="313.0" layoutX="174.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/EZPCLOGOWHITE.jpeg" />
+               </image>
+            </ImageView>
+            <TextField fx:id="tfUsername" layoutX="81.0" layoutY="317.0" prefHeight="50.0" prefWidth="500.0" promptText="Username" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <font>
+                  <Font name="Verdana" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.09541984647512436" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <PasswordField fx:id="tfPassword" layoutX="81.0" layoutY="400.0" prefHeight="50.0" prefWidth="500.0" promptText="Password" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.09923664480447769" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <font>
+                  <Font name="Verdana" size="23.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="btnRegister" layoutX="181.0" layoutY="522.0" mnemonicParsing="false" onAction="#registerUser" prefHeight="52.0" prefWidth="299.0" style="-fx-background-color: #2F4F4F; -fx-background-radius: 10;" text="Register" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.10305343568325043" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="260.0" layoutY="608.0" mnemonicParsing="false" onAction="#toLogin" prefHeight="45.0" prefWidth="140.0" style="-fx-background-color: transparent;" text="Log In" textAlignment="RIGHT" textFill="WHITE" underline="true">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.10305343568325043" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label fx:id="tite" layoutX="316.0" layoutY="273.0" />
+            <CheckBox fx:id="chkbxShowPass" layoutX="100.0" layoutY="477.0" mnemonicParsing="false" onAction="#togglePasswordVisibility" text="Show Password" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </CheckBox>
+            <TextField fx:id="tfVisiblePass" layoutX="81.0" layoutY="400.0" prefHeight="50.0" prefWidth="500.0" promptText="Password" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <font>
+                  <Font name="Verdana" size="23.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color opacity="0.09541984647512436" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <Button layoutX="622.0" layoutY="763.0" mnemonicParsing="false" onAction="#deleteAllUsers" prefHeight="23.0" prefWidth="24.0" style="-fx-background-radius: 10; -fx-background-color: #2F4F4F;" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon disable="true" fill="WHITE" glyphName="TRASH" layoutX="627.0" layoutY="780.0" size="1.5em" visible="false" wrappingWidth="14.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</HBox>
